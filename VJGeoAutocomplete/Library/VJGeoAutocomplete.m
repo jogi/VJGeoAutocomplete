@@ -12,7 +12,7 @@
 #import "JSONKit.h"
 
 #define kVJGeoAutocompleteTimeoutInterval 20
-#define kVJGeoAutocompleteGoogleAPIKey @"AIzaSyCAwVMzCB8oer9wNDdJHfRCjBe8iG5M43I"
+#define kVJGeoAutocompleteGoogleAPIKey @"CHANGE ME"
 
 enum {
     VJGeoAutocompleteRequestStateReady = 0,

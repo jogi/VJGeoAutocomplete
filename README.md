@@ -10,6 +10,9 @@ VJGeoAutocomplete is a Objective-C wrapper for the [Google Places Autocomplete A
 
 ## Usage
 ### Using the Autocomplete API
+
+Change the value of `kVJGeoAutocompleteGoogleAPIKey` in `VJGeoAutocomplete.h` before using this. The instructions on how to obtain an API key can be accessed [here](https://developers.google.com/places/documentation/#Authentication). 
+
 <pre>
 [VJGeoAutocomplete autocomplete:text completion:^(NSArray *predictions, NSError *error) {
             //do something with the predictions, handle errors
@@ -21,9 +24,9 @@ Here `predictions` is an array of `VJGeoPrediction` objects (more on that below)
 
 To use the `location` and `radius` parameters of Autocomplete API you can do:
 
-`
+<pre>
 + (VJGeoAutocomplete*)autocomplete:(NSString *)address location:(CLLocationCoordinate2D)location radius:(CLLocationDistance)radius completion:(void (^)(NSArray *predictions, NSError *error))block;
-`
+</pre>
 
 ### Cancelling requests
 
