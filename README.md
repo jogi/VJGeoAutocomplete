@@ -72,7 +72,7 @@ Make sure you cancel requests for which the user isn't waiting on anymore by kee
 
 ## Credits
 
-VJGeoAutocomplete is brought to you by [Vashishtha Jogi](http://vashishthajogi.com). The structure of the library is highly influenced by [Sam Vermette's](http://samvermette.com) [SVGeocoder](https://github.com/samvermette/SVGeocoder) If you have feature suggestions or bug reports, feel free to help out by sending pull requests or by "creating new issues":https://github.com/jvashishtha/VJGeoAutocomplete/issues/new. If you're using VJGeoAutocomplete in your project, attribution would be nice.
+VJGeoAutocomplete is brought to you by [Vashishtha Jogi](http://vashishthajogi.com). The structure of the library is highly influenced by [Sam Vermette's](http://samvermette.com) [SVGeocoder](https://github.com/samvermette/SVGeocoder) If you have feature suggestions or bug reports, feel free to help out by sending pull requests or by [creating new issues](https://github.com/jvashishtha/VJGeoAutocomplete/issues/new). If you're using VJGeoAutocomplete in your project, attribution would be nice.
 
 ## License
 
