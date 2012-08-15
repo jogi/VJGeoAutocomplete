@@ -14,7 +14,13 @@
 		D49B722D15DB69550026E8AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B722C15DB69550026E8AE /* main.m */; };
 		D49B723115DB69550026E8AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B723015DB69550026E8AE /* AppDelegate.m */; };
 		D49B723415DB69550026E8AE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49B723215DB69550026E8AE /* MainStoryboard.storyboard */; };
-		D49B723715DB69550026E8AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B723615DB69550026E8AE /* ViewController.m */; };
+		D49B724515DB69AA0026E8AE /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B724015DB69AA0026E8AE /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D49B724615DB69AA0026E8AE /* VJGeoAutocomplete.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B724215DB69AA0026E8AE /* VJGeoAutocomplete.m */; };
+		D49B724715DB69AA0026E8AE /* VJGeoPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B724415DB69AA0026E8AE /* VJGeoPrediction.m */; };
+		D49B724915DB69CC0026E8AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49B724815DB69CC0026E8AE /* CoreLocation.framework */; };
+		D49B724D15DB6A3D0026E8AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B724C15DB6A3D0026E8AE /* ViewController.m */; };
+		D49B725115DB6AB00026E8AE /* NSObject+CancelableBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D49B725015DB6AB00026E8AE /* NSObject+CancelableBlock.m */; };
+		D49B725315DB6FBF0026E8AE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D49B725215DB6FBF0026E8AE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +35,18 @@
 		D49B722F15DB69550026E8AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D49B723015DB69550026E8AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D49B723315DB69550026E8AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		D49B723515DB69550026E8AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D49B723615DB69550026E8AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D49B723F15DB69AA0026E8AE /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		D49B724015DB69AA0026E8AE /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		D49B724115DB69AA0026E8AE /* VJGeoAutocomplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJGeoAutocomplete.h; sourceTree = "<group>"; };
+		D49B724215DB69AA0026E8AE /* VJGeoAutocomplete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJGeoAutocomplete.m; sourceTree = "<group>"; };
+		D49B724315DB69AA0026E8AE /* VJGeoPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJGeoPrediction.h; sourceTree = "<group>"; };
+		D49B724415DB69AA0026E8AE /* VJGeoPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJGeoPrediction.m; sourceTree = "<group>"; };
+		D49B724815DB69CC0026E8AE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D49B724B15DB6A3D0026E8AE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D49B724C15DB6A3D0026E8AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D49B724F15DB6AB00026E8AE /* NSObject+CancelableBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CancelableBlock.h"; sourceTree = "<group>"; };
+		D49B725015DB6AB00026E8AE /* NSObject+CancelableBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CancelableBlock.m"; sourceTree = "<group>"; };
+		D49B725215DB6FBF0026E8AE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49B724915DB69CC0026E8AE /* CoreLocation.framework in Frameworks */,
 				D49B722115DB69550026E8AE /* UIKit.framework in Frameworks */,
 				D49B722315DB69550026E8AE /* Foundation.framework in Frameworks */,
 				D49B722515DB69550026E8AE /* CoreGraphics.framework in Frameworks */,
@@ -50,7 +67,9 @@
 		D49B721115DB69550026E8AE = {
 			isa = PBXGroup;
 			children = (
+				D49B725215DB6FBF0026E8AE /* README.md */,
 				D49B722615DB69550026E8AE /* VJGeoAutocomplete */,
+				D49B723D15DB69AA0026E8AE /* Library */,
 				D49B721F15DB69550026E8AE /* Frameworks */,
 				D49B721D15DB69550026E8AE /* Products */,
 			);
@@ -67,6 +86,7 @@
 		D49B721F15DB69550026E8AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D49B724815DB69CC0026E8AE /* CoreLocation.framework */,
 				D49B722015DB69550026E8AE /* UIKit.framework */,
 				D49B722215DB69550026E8AE /* Foundation.framework */,
 				D49B722415DB69550026E8AE /* CoreGraphics.framework */,
@@ -80,9 +100,9 @@
 				D49B722F15DB69550026E8AE /* AppDelegate.h */,
 				D49B723015DB69550026E8AE /* AppDelegate.m */,
 				D49B723215DB69550026E8AE /* MainStoryboard.storyboard */,
-				D49B723515DB69550026E8AE /* ViewController.h */,
-				D49B723615DB69550026E8AE /* ViewController.m */,
 				D49B722715DB69550026E8AE /* Supporting Files */,
+				D49B724B15DB6A3D0026E8AE /* ViewController.h */,
+				D49B724C15DB6A3D0026E8AE /* ViewController.m */,
 			);
 			path = VJGeoAutocomplete;
 			sourceTree = "<group>";
@@ -96,6 +116,38 @@
 				D49B722E15DB69550026E8AE /* VJGeoAutocomplete-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D49B723D15DB69AA0026E8AE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D49B724E15DB6AB00026E8AE /* NSObject+CancelableBlock */,
+				D49B723E15DB69AA0026E8AE /* JSONKit */,
+				D49B724115DB69AA0026E8AE /* VJGeoAutocomplete.h */,
+				D49B724215DB69AA0026E8AE /* VJGeoAutocomplete.m */,
+				D49B724315DB69AA0026E8AE /* VJGeoPrediction.h */,
+				D49B724415DB69AA0026E8AE /* VJGeoPrediction.m */,
+			);
+			name = Library;
+			path = VJGeoAutocomplete/Library;
+			sourceTree = "<group>";
+		};
+		D49B723E15DB69AA0026E8AE /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				D49B723F15DB69AA0026E8AE /* JSONKit.h */,
+				D49B724015DB69AA0026E8AE /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		D49B724E15DB6AB00026E8AE /* NSObject+CancelableBlock */ = {
+			isa = PBXGroup;
+			children = (
+				D49B724F15DB6AB00026E8AE /* NSObject+CancelableBlock.h */,
+				D49B725015DB6AB00026E8AE /* NSObject+CancelableBlock.m */,
+			);
+			path = "NSObject+CancelableBlock";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +203,7 @@
 			files = (
 				D49B722B15DB69550026E8AE /* InfoPlist.strings in Resources */,
 				D49B723415DB69550026E8AE /* MainStoryboard.storyboard in Resources */,
+				D49B725315DB6FBF0026E8AE /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +216,11 @@
 			files = (
 				D49B722D15DB69550026E8AE /* main.m in Sources */,
 				D49B723115DB69550026E8AE /* AppDelegate.m in Sources */,
-				D49B723715DB69550026E8AE /* ViewController.m in Sources */,
+				D49B724515DB69AA0026E8AE /* JSONKit.m in Sources */,
+				D49B724615DB69AA0026E8AE /* VJGeoAutocomplete.m in Sources */,
+				D49B724715DB69AA0026E8AE /* VJGeoPrediction.m in Sources */,
+				D49B724D15DB6A3D0026E8AE /* ViewController.m in Sources */,
+				D49B725115DB6AB00026E8AE /* NSObject+CancelableBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +299,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VJGeoAutocomplete/VJGeoAutocomplete-Prefix.pch";
 				INFOPLIST_FILE = "VJGeoAutocomplete/VJGeoAutocomplete-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -253,6 +311,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VJGeoAutocomplete/VJGeoAutocomplete-Prefix.pch";
 				INFOPLIST_FILE = "VJGeoAutocomplete/VJGeoAutocomplete-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
