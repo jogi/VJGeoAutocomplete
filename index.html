@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="VJGeoAutocomplete : Simple Objective-C wrapper for Google Places Autocomplete API." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>VJGeoAutocomplete</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jvashishtha/VJGeoAutocomplete">View on GitHub</a>
+
+          <h1 id="project_title">VJGeoAutocomplete</h1>
+          <h2 id="project_tagline">Simple Objective-C wrapper for Google Places Autocomplete API.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jvashishtha/VJGeoAutocomplete/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jvashishtha/VJGeoAutocomplete/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>VJGeoAutocomplete</h1>
+
+<p>VJGeoAutocomplete is a Objective-C wrapper for the <a href="https://developers.google.com/places/documentation/autocomplete">Google Places Autocomplete API</a>. It allows to autocomplete addresses. It is block-based for easy integration. For parsing the JSON response received from the Autocomplete API <a href="https://github.com/johnezang/JSONKit">JSONKit</a>. Make sure you read the <a href="https://developers.google.com/places/documentation/index#usage_limits">usage limits</a> before using VJGeoAutocomplete.</p>
+
+<h2>Installation</h2>
+
+<ul>
+<li>Include the folder <code>VJGeoAutocomplete/Library</code> into your project</li>
+<li>Add <em>CoreLocation</em> to your project.</li>
+<li>Add flag <code>-fno-objc-arc</code> to <code>JSONKit.m</code>
+</li>
+</ul><h2>Usage</h2>
+
+<h3>Using the Autocomplete API</h3>
+
+<p>Change the value of <code>kVJGeoAutocompleteGoogleAPIKey</code> in <code>VJGeoAutocomplete.h</code> before using this. The instructions on how to obtain an API key can be accessed <a href="https://developers.google.com/places/documentation/#Authentication">here</a>. </p>
+
+<div class="highlight"><pre><span class="p">[</span><span class="n">VJGeoAutocomplete</span> <span class="nl">autocomplete:</span><span class="n">text</span> <span class="nl">completion:</span><span class="o">^</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">predictions</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">//do something with the predictions, handle errors</span>
+            <span class="p">});</span>
+        <span class="p">}];</span>
+</pre></div>
+
+<p>Here <code>predictions</code> is an array of <code>VJGeoPrediction</code> objects (more on that below).</p>
+
+<p>To use the <code>location</code> and <code>radius</code> parameters of Autocomplete API you can do:</p>
+
+<div class="highlight"><pre><span class="k">+</span> <span class="p">(</span><span class="n">VJGeoAutocomplete</span><span class="o">*</span><span class="p">)</span><span class="nf">autocomplete:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">address</span> <span class="nf">location:</span><span class="p">(</span><span class="n">CLLocationCoordinate2D</span><span class="p">)</span><span class="nv">location</span> <span class="nf">radius:</span><span class="p">(</span><span class="n">CLLocationDistance</span><span class="p">)</span><span class="nv">radius</span> <span class="nf">completion:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">predictions</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span>
+</pre></div>
+
+<h3>Cancelling requests</h3>
+
+<p>Make sure you cancel requests for which the user isn't waiting on anymore by keeping a pointer to your VJGeoAutocomplete object and calling <code>cancel</code> on it. In all cases, the request will time out after 20s.</p>
+
+<h2>About the VJGeoPrediction object</h2>
+
+<p><code>VJGeoPrediction</code> is basically just NSObject with a few convenience methods. Here's what it look's like:</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="err">formattedDescription:</span> <span class="nt">"1577 Woodbine Avenue, Georgina, ON, Canada"</span><span class="p">,</span>
+    <span class="err">matchedSubstrings:</span> <span class="err">[</span>
+        <span class="err">{</span>
+            <span class="err">length:</span> <span class="err">8,</span>
+            <span class="err">offset:</span> <span class="err">0</span>
+        <span class="p">}</span>
+    <span class="err">],</span>
+    <span class="err">terms:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="err">offset:</span> <span class="err">0,</span>
+            <span class="err">value:</span> <span class="nt">"1577 Woodbine Avenue"</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="err">offset:</span> <span class="err">22,</span>
+            <span class="err">value:</span> <span class="nt">"Georgina"</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="err">offset:</span> <span class="err">32,</span>
+            <span class="err">value:</span> <span class="nt">"ON"</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="err">offset:</span> <span class="err">36,</span>
+            <span class="err">value:</span> <span class="nt">"Canada"</span>
+        <span class="p">}</span>
+    <span class="p">]</span><span class="err">,</span>
+    <span class="err">types:</span> <span class="p">[</span>
+        <span class="s2">"route"</span><span class="p">,</span>
+        <span class="s2">"geocode"</span>
+    <span class="p">]</span> 
+<span class="err">}</span>
+</pre></div>
+
+<h2>Credits</h2>
+
+<p>VJGeoAutocomplete is brought to you by <a href="http://vashishthajogi.com">Vashishtha Jogi</a>. The structure of the library is highly influenced by <a href="http://samvermette.com">Sam Vermette's</a> <a href="https://github.com/samvermette/SVGeocoder">SVGeocoder</a> If you have feature suggestions or bug reports, feel free to help out by sending pull requests or by <a href="https://github.com/jvashishtha/VJGeoAutocomplete/issues/new">creating new issues</a>. If you're using VJGeoAutocomplete in your project, attribution would be nice.</p>
+
+<h2>License</h2>
+
+<p><a href="http://creativecommons.org/licenses/by/3.0/">Under a Creative Commons Attribution 3.0 Unported License</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">VJGeoAutocomplete maintained by <a href="https://github.com/jvashishtha">jvashishtha</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
