@@ -38,8 +38,8 @@ Make sure you cancel requests for which the user isn't waiting on anymore by kee
 
 <pre>
 {
-    description: "1577 Woodbine Avenue, Georgina, ON, Canada",
-    matched_substrings: [
+    formattedDescription: "1577 Woodbine Avenue, Georgina, ON, Canada",
+    matchedSubstrings: [
         {
             length: 8,
             offset: 0
